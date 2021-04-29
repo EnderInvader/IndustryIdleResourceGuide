@@ -375,13 +375,30 @@ function line(a,b,c1,c2) {
 	ctx.strokeStyle = gdt;
 	ctx.stroke();
 
+	drawLabel(ctx, "Hello", {x: fx, y: fy}, {x: fx, y: fy},"center",0)
+}
+function drawLabel( ctx, text, p1, p2, alignment, padding ){
+  if (!alignment) alignment = 'center';
+  if (!padding) padding = 0;
 
-	var cvs2 = document.getElementById('canvas2');
-	var ctx2 = cvs2.getContext('2d');
+  var dx = p2.x - p1.x;
+  var dy = p2.y - p1.y;   
+  var p, pad;
+  if (alignment=='center'){
+    p = p1;
+    pad = 1/2;
+  } else {
+    var left = alignment=='left';
+    p = left ? p1 : p2;
+    pad = padding / Math.sqrt(dx*dx+dy*dy) * (left ? 1 : -1);
+  }
 
-	ctx2.font = "30px Arial";
-	ctx2.fillText("Hello",tx,ty);
-	ctx2.rotate(20 * Math.PI / 180);
+  ctx.save();
+  ctx.textAlign = alignment;
+  ctx.translate(p.x+dx*pad,p.y+dy*pad);
+  ctx.rotate(Math.atan2(dy,dx));
+  ctx.fillText(text,0,0);
+  ctx.restore();
 }
 
 

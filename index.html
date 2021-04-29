@@ -44,7 +44,7 @@
 </tr>
 <tr>
 <td class="items">
-<ul id="planets">
+<ul id="maps">
 <li>Barren</li>
 <li>Gas</li>
 <li>Ice</li>
@@ -105,7 +105,7 @@
 <li class="ionic-solutions">Electrolytes</li>
 <li class="micro-organisms">Bacteria</li>
 <li class="noble-gas">Oxygen</li>
- <li class="noble-metals">Precious Metals</li>
+<li class="noble-metals">Precious Metals</li>
 <li class="non-cs-crystals">Chiral Structures</li>
 <li class="planktic-colonies">Biomass</li>
 <li class="reactive-gas">Oxidizing Compound</li>
@@ -316,7 +316,7 @@ $(document).ready(function() {
 			item = lower_case($(this).children("span").html());		// turn item name css compliant
 			$(this).attr({ id: item });								// set li id as item name
 			
-			if ($(this).parents("ul").attr("id") != "planets") {		// planets has no before
+			if ($(this).parents("ul").attr("id") != "maps") {		// maps has no before
 				list = $(this).attr("class").split(/\s+/);			// get before items from li class
 				for (i in list) {
 					$("#"+list[i]+" span").addClass(item);			// find id with class, inject itself into span as class
@@ -440,7 +440,7 @@ function line(a,b,c1,c2) {
 
 
 pi = {
-	planets: ['Barren','Gas','Ice','Lava','Oceanic','Plasma','Storm','Temperate'],
+	maps: ['Barren','Gas','Ice','Lava','Oceanic','Plasma','Storm','Temperate'],
 	resources: ['Aqueous Liquids','Autotrophs','Base Metals','Carbon Compounds','Complex Organisms','Felsic Magma','Heavy Metals','Ionic Solutions','Micro Organisms','Noble Gas','Noble Metals','Non-CS Crystals','Planktic Colonies','Reactive Gas','Suspended Plasma'],
 	productions: {
 		basic: ['Iron','Industrial Fibers','Reactive Metals','Biofuels','Proteins','Silicon','Toxic Metals','Electrolytes','Bacteria','Oxygen','Precious Metals','Chiral Structures','Biomass','Oxidizing Compound','Plasmoids'],

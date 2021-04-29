@@ -34,13 +34,13 @@
 <td valign="top">Maps</td>
 <td valign="top" colspan="3">Resources</td>
 <td valign="top"></td>
-<td valign="top" colspan="3">Basic<br></td>
-<td valign="top"></td>
 <td valign="top" colspan="3">Tier 1<br></td>
 <td valign="top"></td>
 <td valign="top" colspan="3">Tier 2<br></td>
 <td valign="top"></td>
 <td valign="top" colspan="3">Tier 3<br></td>
+<td valign="top"></td>
+<td valign="top" colspan="3">Tier 4<br></td>
 </tr>
 <tr>
 <td class="items">
@@ -74,24 +74,14 @@
 </td>
 <td class="items"></td>
 <td colspan="3" class="items">
-<ul id="basic">
-<li class="iron">Iron!</li>
-<li class="oil">Oil!</li>
-<li class="coal">Coal!</li>
-<li class="aluminum">Aluminum!</li>
-<li class="copper">Copper!</li>
-<li class="silicon">Silicon!</li>
-<li class="chromium">Chromium!</li>
-<li class="titainium">Titanium!</li>
-<li class="uranium">Uranium!</li>
-<li class="gas">Gas!</li>
-<li class="lithium">Lithium!</li>
-<li class="wood">Wood!</li>
+<ul id="tr1">
+<li class="wood">Lumber</li>
+<li class="wood">Paper</li>
 </ul>
 </td>
 <td class="items"></td>
 <td colspan="3" class="items">
-<ul id="refined">
+<ul id="tr2">
 <li class="biofuels precious-metals">Biocells</li>
 <li class="reactive-metals toxic-metals">Construction Blocks</li>
 <li class="toxic-metals chiral-structures pos">Consumer Electronics</li>
@@ -120,7 +110,7 @@
 </td>
 <td class="items"></td>
 <td colspan="3" class="items">
-<ul id="specialized">
+<ul id="tr3">
 <li class="nanites livestock construction-blocks">Biotech Research Reports</li>
 <li class="silicate-glass rocket-fuel">Camera Drones</li>
 <li class="oxides coolant">Condensates</li>
@@ -146,7 +136,7 @@
 </td>
 <td class="items" style=""></td>
 <td colspan="3" class="items" style="">
-<ul id="advanced">
+<ul id="tr4">
 <li class="neocoms data-chips high-tech-transmitters">Broadcast Node</li>
 <li class="gel-matrix-biopaste hazmat-detection-systems planetary-vehicles">Integrity Response Drones</li>
 <li class="industrial-explosives ukomi-super-conductors reactive-metals">Nano-Factory</li>
@@ -337,10 +327,10 @@ $(document).ready(function() {
 			}
 		})
 		
-		// $("ul#basic").hover(function() { $(".p1").toggleClass("current"); });
-		// $("ul#refined").hover(function() { $(".p2").toggleClass("current"); });
-		// $("ul#specialized").hover(function() { $(".p3").toggleClass("current"); });
-		// $("ul#advanced").hover(function() { $(".p4").toggleClass("current"); });
+		// $("ul#tr1").hover(function() { $(".p1").toggleClass("current"); });
+		// $("ul#tr2").hover(function() { $(".p2").toggleClass("current"); });
+		// $("ul#tr3").hover(function() { $(".p3").toggleClass("current"); });
+		// $("ul#tr4").hover(function() { $(".p4").toggleClass("current"); });
 	
 	function lower_case(s) { return s.toLowerCase().replace(/ /g, '-').replace(/\./g, ''); }
 	function pi_link(item) {
@@ -418,10 +408,10 @@ pi = {
 	maps: ['Stockholm','Oslo','St. Petersburg','Rotterdam','Detroit','Toulouse','Rome','Hamburg','Boston'],
 	resources: ['Iron','Oil','Coal','Aluminum','Copper','Silicon','Chromium','Titanium','Uranium','Gas','Lithium','Wood'],
 	productions: {
-		basic: ['Lumber','Paper'],
-		refined: ['Biocells','Construction Blocks','Consumer Electronics','Coolant','Enriched Uranium','Fertilizer','Gen. Enhanced Livestock','Livestock','Mechanical Parts','Microfiber Shielding','Miniature Electronics','Nanites','Oxides','Polyaramids','Polytextiles','Rocket Fuel','Silicate Glass','Superconductors','Supertensile Plastics','Synthetic Oil','Test Cultures','Transmitter','Viral Agent','Water-Cooled CPU'],
-		specialized: ['Biotech Research Reports','Camera Drones','Condensates','Cryoprotectant Solution','Data Chips','Gel-Matrix Biopaste','Guidance Systems','Hazmat Detection Systems','Hermetic Membranes','High-Tech Transmitters','Industrial Explosives','Neocoms','Nuclear Reactors','Planetary Vehicles','Robotics','Smartfab Units','Supercomputers','Synthetic Synapses','Transcranial Microcontrollers','Ukomi Super Conductors','Vaccines'],
-		advanced: ['Broadcast Node','Integrity Response Drones','Nano-Factory','Organic Mortar Applicators','Recursive Computing Module','Self-Harmonizing Power Core','Sterile Conduits','Wetware Mainframe']
+		tr1: ['Lumber','Paper'],
+		tr2: ['Biocells','Construction Blocks','Consumer Electronics','Coolant','Enriched Uranium','Fertilizer','Gen. Enhanced Livestock','Livestock','Mechanical Parts','Microfiber Shielding','Miniature Electronics','Nanites','Oxides','Polyaramids','Polytextiles','Rocket Fuel','Silicate Glass','Superconductors','Supertensile Plastics','Synthetic Oil','Test Cultures','Transmitter','Viral Agent','Water-Cooled CPU'],
+		tr3: ['Biotech Research Reports','Camera Drones','Condensates','Cryoprotectant Solution','Data Chips','Gel-Matrix Biopaste','Guidance Systems','Hazmat Detection Systems','Hermetic Membranes','High-Tech Transmitters','Industrial Explosives','Neocoms','Nuclear Reactors','Planetary Vehicles','Robotics','Smartfab Units','Supercomputers','Synthetic Synapses','Transcranial Microcontrollers','Ukomi Super Conductors','Vaccines'],
+		tr4: ['Broadcast Node','Integrity Response Drones','Nano-Factory','Organic Mortar Applicators','Recursive Computing Module','Self-Harmonizing Power Core','Sterile Conduits','Wetware Mainframe']
 	} 
 }
 </script>

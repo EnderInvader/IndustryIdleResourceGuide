@@ -228,6 +228,7 @@
 </tr>
 </table>
 <canvas id="canvas"></canvas>
+<canvas id="canvas2"></canvas>
 <div style="position: fixed; bottom: 0; text-align: center; width: 100%;">
 </div>
 </body>
@@ -346,6 +347,10 @@ function canvas() {
 		"height": $("#pi").outerHeight(),
 		"width": $("#pi").outerWidth() 
 	});
+	$("#canvas2").attr({ 
+		"height": $("#pi").outerHeight(),
+		"width": $("#pi").outerWidth() 
+	});
 }
 function line(a,b,c1,c2) {
 	pad = 0;
@@ -355,8 +360,8 @@ function line(a,b,c1,c2) {
 	ty  = b.position().top + b.height()/2 + 1;
 
 	var cvs = document.getElementById('canvas');
-
 	var ctx = cvs.getContext('2d');
+
 	ctx.lineWidth = 1;
 	ctx.beginPath();
 	ctx.moveTo(tx,ty);
@@ -370,9 +375,13 @@ function line(a,b,c1,c2) {
 	ctx.strokeStyle = gdt;
 	ctx.stroke();
 
-	ctx.font = "30px Arial";
-	ctx.fillText("Hello",tx,ty);
-	ctx.rotate(20 * Math.PI / 180);
+
+	var cvs2 = document.getElementById('canvas2');
+	var ctx2 = cvs2.getContext('2d');
+
+	ctx2.font = "30px Arial";
+	ctx2.fillText("Hello",tx,ty);
+	ctx2.rotate(20 * Math.PI / 180);
 }
 
 

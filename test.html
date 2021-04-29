@@ -80,6 +80,19 @@
 <ul id="tf1">
 <li class="wood">Lumber Mill</li>
 <li class="wood">Paper Mill</li>
+<li class="iron coal">Steel Mill</li>
+<li class="">Stainless Steel Plant</li>
+<li class="oil">Oil Refinery</li>
+<li class="">Coal Gasification Plant</li>
+<li class="gas">Gas Processing Plant</li>
+<li class="uranium">Uranium Enrichment Plant</li>
+<li class="silicon iron coal">SemiconductorFactory</li>
+<li class="">IntegratedCircuitFab</li>
+<li class="aluminum coal iron">BatteryFactory</li>
+<li class="chromium steel">TitaniumAlloyPlant</li>
+<li class="lithium aluminum">ChromiumAlloyPlant</li>
+<li class="">LiionBatteryFactory</li>
+<li class="silicon coal">GlassFactory</li>
 </ul>
 </td>
 <td class="items"></td>
@@ -403,16 +416,22 @@ pi = {
 	maps: ['Stockholm','Oslo','St. Petersburg','Rotterdam','Detroit','Toulouse','Rome','Hamburg','Boston'],
 	resources: ['Iron','Oil','Coal','Aluminum','Copper','Silicon','Chromium','Titanium','Uranium','Gas','Lithium','Wood'],
 	productions: {
-		tr1: ['Lumber','Paper'],
-		tr2: ['Book'],
-		tr3: [],
-		tr4: []
+		tr1: ['Lumber','Paper','Steel','Petrol','Plastic','EnrichedUranium','Semiconductor','Battery','Glass'],
+		tr2: ['IntegratedCircuit','Toy','Shoes','Clothing','Robot','Screen','Camera','Engine','Gun','Book','Guitar','Drum'],
+		tr3: ['Fashion','Santa','Phone','PC','JetEngine','Artillery','Car','Train','Ship','Helicopter','Zeppelin','Music'],
+		tr4: ['Video','Missile','Bitcoin','Tank','Satellite','Aircraft','Game','Software'],
+		tr5: ['Dogecoin','Rocket','Submarine','Movie','Console','OperatingSystem'],
+		tr6: ['Spaceship','Internet'],
+		tr7: ['SpaceStation']
 	},
 	factories: {
-		tf1: ['Lumber Mill', 'Paper Mill'],
-		tf2: ['Book Publisher'],
+		tf1: ['Lumber Mill','Paper Mill','Steel Mill','StainlessSteelPlant','OilRefinery','CoalGasificationPlant','GasProcessingPlant','UraniumEnrichmentPlant','SemiconductorFactory','IntegratedCircuitFab','BatteryFactory','TitaniumAlloyPlant','ChromiumAlloyPlant','LiionBatteryFactory','GlassFactory'],
+		tf2: ['CircuitFoundry','ToyFactory','ShoeFactory','ClothingFactory','RobotFactory','ScreenFactory','CameraFactory','EngineFactory','GunFactory','Book Publisher','GuitarFactory','DrumFactory','Polytechnic'],
 		tf3: [],
-		tf4: []
+		tf4: [],
+		tf5: [],
+		tf6: [],
+		tf7: ['SpaceStationFactory']
 	},
 	special: {
 		sp1: ['Science','Culture'],

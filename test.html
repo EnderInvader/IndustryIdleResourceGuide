@@ -394,7 +394,7 @@ function drawLabel( ctx, text, p1, p2, alignment, padding ){
   ctx.textAlign = alignment;
   ctx.translate(p.x+dx*pad,p.y+dy*pad);
   ctx.rotate(Math.atan2(dy,dx));
-  ctx.fillText(text,0,5);
+  ctx.fillText(text,0,4);
   ctx.restore();
 }
 

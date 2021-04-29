@@ -375,7 +375,7 @@ function line(a,b,c1,c2) {
 	ctx.strokeStyle = gdt;
 	ctx.stroke();
 
-	drawLabel(ctx, "Hello", {x: fx, y: fy}, {x: fx, y: fy},"center",0)
+	drawLabel(ctx, "Hello", {x: fx, y: fy}, {x: tx, y: ty},"center",0)
 }
 function drawLabel( ctx, text, p1, p2, alignment, padding ){
   if (!alignment) alignment = 'center';

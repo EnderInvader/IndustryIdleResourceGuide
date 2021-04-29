@@ -46,32 +46,30 @@
 <td class="items">
 <ul id="maps">
 <li>Stockholm</li>
-<li>Gas</li>
-<li>Ice</li>
-<li>Lava</li>
-<li>Oceanic</li>
-<li>Plasma</li>
-<li>Storm</li>
-<li>Temperate</li>
+<li>Oslo</li>
+<li>St. Petersburg</li>
+<li>Rotterdam</li>
+<li>Detroit</li>
+<li>Toulouse</li>
+<li>Rome</li>
+<li>Hamburg</li>
+<li>Boston</li>
 </ul>
 </td>
 <td colspan="3" class="items">
 <ul id="resources">
-<li class="stockholm gas ice oceanic storm temperate">Aqueous Liquids</li>
-<li class="temperate">Autotrophs</li>
-<li class="stockholm gas lava plasma storm">Base Metals</li>
-<li class="stockholm oceanic temperate">Carbon Compounds</li>
-<li class="oceanic temperate">Complex Organisms</li>
-<li class="lava">Felsic Magma</li>
-<li class="ice lava plasma">Heavy Metals</li>
-<li class="gas storm">Ionic Solutions</li>
-<li class="stockholm ice oceanic temperate">Micro Organisms</li>
-<li class="gas ice storm">Noble Gas</li>
-<li class="stockholm plasma">Noble Metals</li>
-<li class="lava plasma">Non-CS Crystals</li>
-<li class="ice oceanic">Planktic Colonies</li>
-<li class="gas">Reactive Gas</li>
-<li class="lava plasma storm">Suspended Plasma</li>
+<li class="stockholm oslo stpetersburg rotterdam detroit toulouse rome hamburg boston">Iron</li>
+<li class="stockholm oslo stpetersburg toulouse hamburg boston">Oil</li>
+<li class="stockholm oslo stpetersburg rotterdam detroit toulouse rome hamburg boston">Coal</li>
+<li class="stockholm oslo stpetersburg rotterdam detroit toulouse rome hamburg boston">Aluminum</li>
+<li class="stockholm hamburg">Copper</li>
+<li class="stockholm oslo stpetersburg rotterdam detroit toulouse rome hamburg boston">Silicon</li>
+<li class="rotterdam rome">Chromium</li>
+<li class="detroit toulouse rome boston">Titainium</li>
+<li class="stpetersburg toulouse">Uranium</li>
+<li class="oslo rotterdam detroit rome boston">Gas</li>
+<li class="detroit hamburg">Lithium</li>
+<li class="stockholm oslo stpetersburg rotterdam detroit toulouse rome hamburg boston">Wood</li>
 </ul>
 </td>
 <td>
@@ -95,21 +93,18 @@
 </td>
 <td colspan="3" class="items">
 <ul id="basic">
-<li class="aqueous-liquids">Iron</li>
-<li class="autotrophs">Industrial Fibers</li>
-<li class="base-metals">Reactive Metals</li>
-<li class="carbon-compounds">Biofuels</li>
-<li class="complex-organisms">Proteins</li>
-<li class="felsic-magma">Silicon</li>
-<li class="heavy-metals">Toxic Metals</li>
-<li class="ionic-solutions">Electrolytes</li>
-<li class="micro-organisms">Bacteria</li>
-<li class="noble-gas">Oxygen</li>
-<li class="noble-metals">Precious Metals</li>
-<li class="non-cs-crystals">Chiral Structures</li>
-<li class="planktic-colonies">Biomass</li>
-<li class="reactive-gas">Oxidizing Compound</li>
-<li class="suspended-plasma">Plasmoids</li>
+<li class="fe">Iron</li>
+<li class="oil">Oil</li>
+<li class="coal">Coal</li>
+<li class="al">Aluminum</li>
+<li class="cu">Copper</li>
+<li class="si">Silicon</li>
+<li class="cr">Chromium</li>
+<li class="ti">Titanium</li>
+<li class="u">Uranium</li>
+<li class="gas">Gas</li>
+<li class="li">Lithium</li>
+<li class="wood">Wood</li>
 </ul>
 </td>
 <td class="items"></td>
@@ -438,10 +433,10 @@ function line(a,b,c1,c2) {
 
 
 pi = {
-	maps: ['Stockholm','Gas','Ice','Lava','Oceanic','Plasma','Storm','Temperate'],
-	resources: ['Aqueous Liquids','Autotrophs','Base Metals','Carbon Compounds','Complex Organisms','Felsic Magma','Heavy Metals','Ionic Solutions','Micro Organisms','Noble Gas','Noble Metals','Non-CS Crystals','Planktic Colonies','Reactive Gas','Suspended Plasma'],
+	maps: ['Stockholm','Oslo','St. Petersburg','Rotterdam','Detroit','Toulouse','Rome','Hamburg','Boston'],
+	resources: ['Iron','Oil','Coal','Aluminum','Copper','Silicon','Chromium','Titanium','Uranium','Gas','Lithium','Wood'],
 	productions: {
-		basic: ['Iron','Industrial Fibers','Reactive Metals','Biofuels','Proteins','Silicon','Toxic Metals','Electrolytes','Bacteria','Oxygen','Precious Metals','Chiral Structures','Biomass','Oxidizing Compound','Plasmoids'],
+		basic: ['Lumber','Paper'],
 		refined: ['Biocells','Construction Blocks','Consumer Electronics','Coolant','Enriched Uranium','Fertilizer','Gen. Enhanced Livestock','Livestock','Mechanical Parts','Microfiber Shielding','Miniature Electronics','Nanites','Oxides','Polyaramids','Polytextiles','Rocket Fuel','Silicate Glass','Superconductors','Supertensile Plastics','Synthetic Oil','Test Cultures','Transmitter','Viral Agent','Water-Cooled CPU'],
 		specialized: ['Biotech Research Reports','Camera Drones','Condensates','Cryoprotectant Solution','Data Chips','Gel-Matrix Biopaste','Guidance Systems','Hazmat Detection Systems','Hermetic Membranes','High-Tech Transmitters','Industrial Explosives','Neocoms','Nuclear Reactors','Planetary Vehicles','Robotics','Smartfab Units','Supercomputers','Synthetic Synapses','Transcranial Microcontrollers','Ukomi Super Conductors','Vaccines'],
 		advanced: ['Broadcast Node','Integrity Response Drones','Nano-Factory','Organic Mortar Applicators','Recursive Computing Module','Self-Harmonizing Power Core','Sterile Conduits','Wetware Mainframe']

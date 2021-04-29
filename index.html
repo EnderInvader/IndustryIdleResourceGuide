@@ -55,7 +55,7 @@
 <li>Temperate</li>
 </ul>
 </td>
-<td colspan="3" class="items" style="text-align: right;">
+<td colspan="3" class="items">
 <ul id="resources">
 <li class="stockholm gas ice oceanic storm temperate">Aqueous Liquids</li>
 <li class="temperate">Autotrophs</li>
@@ -93,7 +93,7 @@
 <li>&rarr;</li>
 </ul>
 </td>
-<td colspan="3" class="items" style="text-align: left;">
+<td colspan="3" class="items">
 <ul id="basic">
 <li class="aqueous-liquids">Iron</li>
 <li class="autotrophs">Industrial Fibers</li>
@@ -385,12 +385,11 @@ $(document).ready(function() {
 	}
 	function pi_link_after(item, degree, depth) {
 		type   = item.parent("ul").attr("id");
-		degree = degree + ((type == "resources") ? -1 : 0);
 		
 		$(".items li."+item.attr("id"))
 			.each(function() {
 				$(this).css({color: colors[5+degree]});
-				if (type != "resources" && degree < 3) {
+				if (degree < 3) {
 					line($(this).children("span"),item.children("span"),colors[5+degree-1],colors[5+degree]);
 				}
 				pi_link_after($(this),degree+1);

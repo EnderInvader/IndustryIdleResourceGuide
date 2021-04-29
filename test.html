@@ -228,7 +228,6 @@
 </tr>
 </table>
 <canvas id="canvas"></canvas>
-<canvas id="canvas2"></canvas>
 <div style="position: fixed; bottom: 0; text-align: center; width: 100%;">
 </div>
 </body>
@@ -347,10 +346,6 @@ function canvas() {
 		"height": $("#pi").outerHeight(),
 		"width": $("#pi").outerWidth() 
 	});
-	$("#canvas2").attr({ 
-		"height": $("#pi").outerHeight(),
-		"width": $("#pi").outerWidth() 
-	});
 }
 function line(a,b,c1,c2) {
 	pad = 0;
@@ -375,6 +370,7 @@ function line(a,b,c1,c2) {
 	ctx.strokeStyle = gdt;
 	ctx.stroke();
 
+	ctx.font  = '10pt Arial';
 	drawLabel(ctx, "Hello", {x: tx, y: ty}, {x: fx, y: fy},"center",0)
 }
 function drawLabel( ctx, text, p1, p2, alignment, padding ){

@@ -32,9 +32,9 @@
 <table id="pi" border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr class="header">
 <td valign="top">Maps</td>
-<td valign="top" colspan="3" style="text-align: right;">Resources</td>
+<td valign="top" colspan="3">Resources</td>
 <td valign="top"></td>
-<td valign="top" colspan="3" style="text-align: left;">Basic<br> <i>P1 - 1800s</i></td>
+<td valign="top" colspan="3">Basic<br></td>
 <td valign="top"></td>
 <td valign="top" colspan="3">Tier 1<br></td>
 <td valign="top"></td>
@@ -372,13 +372,12 @@ $(document).ready(function() {
 	}
 	function pi_link_before(item, degree, depth) {
 		type   = item.parent("ul").attr("id");
-		degree = degree + ((type == "basic") ? 1 : 0);
 
 		class_prefex = ".items li span.";
 		$(".items li span."+item.attr("id"))
 			.each(function() {
 				$(this).parent("li").css({color: colors[5+degree]});
-				if (type != "basic" && degree > -4) {
+				if (degree > -4) {
 					line(item.children("span"),$(this),colors[5+degree],colors[5+degree+1]);
 				}
 				pi_link_before($(this).parent("li"),degree-1);

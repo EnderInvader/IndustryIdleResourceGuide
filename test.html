@@ -493,8 +493,8 @@ $(document).ready(function() {
 	
 	function lower_case(s) { return s.toLowerCase().replace(/ /g, '-').replace(/\./g, ''); }
 	function pi_link(item) {
-		pi_link_before(item,-1);
-		pi_link_after(item,1);
+		pi_link_before(item,0);
+		pi_link_after(item,0);
 	}
 	function pi_link_before(item, degree, depth) {
 		type   = item.parent("ul").attr("id");
@@ -502,11 +502,11 @@ $(document).ready(function() {
 		class_prefex = ".items li span.";
 		$(".items li span."+item.attr("id"))
 			.each(function() {
-				$(this).parent("li").css({color: beforeColors[-1*degree]});
-				if (degree > -4) {
-					line(item.children("span"),$(this),beforeColors[-1*degree],beforeColors[-1*degree+1]);
+				$(this).parent("li").css({color: beforeColors[degree]});
+				if (degree < 3) {
+					line(item.children("span"),$(this),beforeColors[degree-1],beforeColors[degree]);
 				}
-				pi_link_before($(this).parent("li"),degree-1);
+				pi_link_before($(this).parent("li"),degree+1);
 			});
 	}
 	function pi_link_after(item, degree, depth) {

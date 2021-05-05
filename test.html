@@ -422,9 +422,12 @@
 <script>
 $(document).ready(function() {
 	
-	var colors = ["#ff00ff","#ffff96","#ffff64","#ffff32","#ffff00","#0000ff","#00ffff","32ffff","64ffff","#96ffff"];
-	var offset = 5;
-	$(".items li").css({color:colors[0]});
+	var baseColor = "#ff00ff";
+	var currentColor = "#0000ff";
+	var beforeColors = ["#ffff96","#ffff64","#ffff32","#ffff00"];
+	var afterColors = ["#00ffff","32ffff","64ffff","#96ffff"];
+	
+	$(".items li").css({color:baseColor});
 	
 	canvas();
 	$(window).resize(function() { // todo: get event, only repaint on mouse release
@@ -450,14 +453,14 @@ $(document).ready(function() {
 		.on('mouseenter','ul li',function() {
 			if (! $('#pi').hasClass('sticky')) {
 				$(this).addClass("current");
-				$(this).css({color:colors[offset]});
+				$(this).css({color:currentColor});
 				pi_link($(this));
 			}
 		})
 		.on('mouseleave','ul li',function() {
 			if (! $('#pi').hasClass('sticky')) {
 				$(this).removeClass("current");
-				$(".items li").css({color:colors[0]});
+				$(".items li").css({color:baseColor});
 				canvas();
 			}
 		})
@@ -470,15 +473,15 @@ $(document).ready(function() {
 			if ($('#pi').hasClass('sticky')) {
 				$('#pi').removeClass('sticky')
 				
-				$('.items li').removeClass('current').css({color:colors[0]});
+				$('.items li').removeClass('current').css({color:baseColor});
 			} else {
 				$('#pi').addClass('sticky')
 				
-				$('.items li').removeClass('current').css({color:colors[0]});
+				$('.items li').removeClass('current').css({color:baseColor});
 				canvas();
 
 				$(this).addClass("current");
-				$(this).css({color:colors[offset]});
+				$(this).css({color:currentColor});
 				pi_link($(this));
 			}
 		})
@@ -511,9 +514,9 @@ $(document).ready(function() {
 		
 		$(".items li."+item.attr("id"))
 			.each(function() {
-				$(this).css({color: colors[offset+degree]});
+				$(this).css({color: afterColors[degree]});
 				if (degree < 3) {
-					line($(this).children("span"),item.children("span"),colors[offset+degree-1],colors[offset+degree]);
+					line($(this).children("span"),item.children("span"),afterColors[degree-1],afterColors[degree]);
 				}
 				pi_link_after($(this),degree+1);
 			});
@@ -588,25 +591,25 @@ function drawLabel( ctx, text, p1, p2, alignment, padding ){
 
 
 pi = {
-	maps: ['Stockholm','Oslo','St. Petersburg','Rotterdam','Detroit','Toulouse','Rome','Hamburg','Boston','Osaka'],
+	maps: ['Stockholm','Oslo','St Petersburg','Rotterdam','Detroit','Toulouse','Rome','Hamburg','Boston','Osaka'],
 	resources: ['Iron','Oil','Coal','Aluminum','Copper','Silicon','Chromium','Titanium','Uranium','Gas','Lithium','Wood'],
 	productions: {
-		tr1: ['Lumber','Paper','Steel','Petrol','Plastic','EnrichedUranium','Semiconductor','Battery','Glass'],
-		tr2: ['IntegratedCircuit','Toy','Shoes','Clothing','Robot','Screen','Camera','Engine','Gun','Book','Guitar','Drum'],
+		tr1: ['Lumber','Paper','Steel','Petrol','Plastic','Enriched Uranium','Semiconductor','Battery','Glass'],
+		tr2: ['Integrated Circuit','Toy','Shoes','Clothing','Robot','Screen','Camera','Engine','Gun','Book','Guitar','Drum'],
 		tr3: ['Fashion','Santa','Phone','PC','JetEngine','Artillery','Car','Train','Ship','Helicopter','Zeppelin','Music'],
 		tr4: ['Video','Missile','Bitcoin','Tank','Satellite','Aircraft','Game','Software'],
 		tr5: ['Dogecoin','Rocket','Submarine','Movie','Console','OperatingSystem'],
 		tr6: ['Spaceship','Internet'],
-		tr7: ['SpaceStation']
+		tr7: ['Space Station']
 	},
 	factories: {
-		tf1: ['Lumber Mill','Paper Mill','Steel Mill','Stainless Steel Plant','Oil Refinery','Coal Gasification Plant','GasProcessingPlant','UraniumEnrichmentPlant','SemiconductorFactory','IntegratedCircuitFab','BatteryFactory','Titanium Alloy Plant','Chromium Alloy Plant','Liion Battery Factory','GlassFactory'],
-		tf2: ['CircuitFoundry','ToyFactory','ShoeFactory','ClothingFactory','RobotFactory','ScreenFactory','CameraFactory','EngineFactory','GunFactory','Book Publisher','GuitarFactory','DrumFactory','Polytechnic'],
+		tf1: ['Lumber Mill','Paper Mill','Steel Mill','Stainless Steel Plant','Oil Refinery','Coal Gasification Plant','GasProcessingPlant','UraniumEnrichmentPlant','SemiconductorFactory','IntegratedCircuitFab','Battery Factory','Titanium Alloy Plant','Chromium Alloy Plant','Liion Battery Factory','Glass Factory'],
+		tf2: ['Circuit Foundry','Toy Factory','Shoe Factory','Clothing Factory','RobotFactory','ScreenFactory','CameraFactory','EngineFactory','GunFactory','Book Publisher','GuitarFactory','DrumFactory','Polytechnic'],
 		tf3: [],
 		tf4: [],
 		tf5: [],
 		tf6: [],
-		tf7: ['SpaceStationFactory']
+		tf7: ['Space Station Factory']
 	},
 	special: {
 		sp1: ['Science','Culture'],

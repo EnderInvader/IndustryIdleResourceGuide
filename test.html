@@ -503,9 +503,7 @@ $(document).ready(function() {
 		$(".items li span."+item.attr("id"))
 			.each(function() {
 				$(this).parent("li").css({color: beforeColors[degree]});
-				if (degree < 3) {
-					line(item.children("span"),$(this),beforeColors[degree],beforeColors[degree+1]);
-				}
+				line(item.children("span"),$(this),beforeColors[0],beforeColors[0]);
 				pi_link_before($(this).parent("li"),degree+1);
 			});
 	}
@@ -515,9 +513,7 @@ $(document).ready(function() {
 		$(".items li."+item.attr("id"))
 			.each(function() {
 				$(this).css({color: afterColors[degree]});
-				if (degree < 3) {
-					line($(this).children("span"),item.children("span"),afterColors[degree],afterColors[degree+1]);
-				}
+				line($(this).children("span"),item.children("span"),afterColors[0],afterColors[0]);
 				pi_link_after($(this),degree+1);
 			});
 	}

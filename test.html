@@ -504,7 +504,7 @@ $(document).ready(function() {
 			.each(function() {
 				$(this).parent("li").css({color: beforeColors[degree]});
 				if (degree < 3) {
-					line(item.children("span"),$(this),beforeColors[degree-1],beforeColors[degree]);
+					line(item.children("span"),$(this),beforeColors[degree],beforeColors[degree+1]);
 				}
 				pi_link_before($(this).parent("li"),degree+1);
 			});
@@ -516,7 +516,7 @@ $(document).ready(function() {
 			.each(function() {
 				$(this).css({color: afterColors[degree]});
 				if (degree < 3) {
-					line($(this).children("span"),item.children("span"),afterColors[degree-1],afterColors[degree]);
+					line($(this).children("span"),item.children("span"),afterColors[degree],afterColors[degree+1]);
 				}
 				pi_link_after($(this),degree+1);
 			});

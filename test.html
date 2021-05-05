@@ -444,7 +444,6 @@ $(document).ready(function() {
 			
 			if ($(this).parents("ul").attr("id") != "maps") {		// maps has no before
 				list = $(this).attr("class").split(/\s+/);			// get before items from li class
-				$("#"+list[i]+" span").addClass("map");
 				for (i in list) {
 					$("#"+list[i]+" span").addClass(item);			// find id with class, inject itself into span as class
 				}
@@ -457,6 +456,7 @@ $(document).ready(function() {
 				$(this).css({color:currentColor});
 
 				if (!$(this).hasClass('map')){
+					console.log($(this));
 					pi_link($(this));
 				}
 			}

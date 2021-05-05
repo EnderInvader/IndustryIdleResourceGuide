@@ -68,16 +68,16 @@
 <tr>
 <td class="items">
 <ul id="maps">
-<li>Stockholm</li>
-<li>Oslo</li>
-<li>St Petersburg</li>
-<li>Rotterdam</li>
-<li>Detroit</li>
-<li>Toulouse</li>
-<li>Rome</li>
-<li>Hamburg</li>
-<li>Boston</li>
-<li>Osaka</li>
+<li class="map">Stockholm</li>
+<li class="map">Oslo</li>
+<li class="map">St Petersburg</li>
+<li class="map">Rotterdam</li>
+<li class="map">Detroit</li>
+<li class="map">Toulouse</li>
+<li class="map">Rome</li>
+<li class="map">Hamburg</li>
+<li class="map">Boston</li>
+<li class="map">Osaka</li>
 </ul>
 </td>
 <td colspan="3" class="items">
@@ -454,7 +454,10 @@ $(document).ready(function() {
 			if (! $('#pi').hasClass('sticky')) {
 				$(this).addClass("current");
 				$(this).css({color:currentColor});
-				pi_link($(this));
+
+				if (!$(this).hasClass('map')){
+					pi_link($(this));
+				}
 			}
 		})
 		.on('mouseleave','ul li',function() {

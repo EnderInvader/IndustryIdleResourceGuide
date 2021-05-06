@@ -1,7 +1,7 @@
 <!--Source Code from https://hanns.io/pi-->
 <title>Industry Idle Resource Guide</title>
 <style type="text/css" media="screen">
-	body { background-color: #000; }
+	body { background-color: #000 }
 	body,td { font: .8em Gotham, Helvetica Neue, Helvetica, Arial Narrow, Arial; font-weight: 500; color: #666; padding: 0; margin: 0; }
 	ul { list-style: none none; margin: 0; padding: 0; display: block; }
 	
@@ -35,76 +35,264 @@
 <td valign="top">Maps</td>
 <td valign="top" colspan="3">Resources</td>
 <td valign="top"></td>
-<td valign="top" colspan="3">Tier 1<br></td>
+<td valign="top" colspan="3">T1 Factories<br></td>
 <td valign="top"></td>
-<td valign="top" colspan="3">Tier 2<br></td>
+<td valign="top" colspan="3">T1 Resources<br></td>
 <td valign="top"></td>
-<td valign="top" colspan="3">Tier 3<br></td>
+<td valign="top" colspan="3">T2 Factories<br></td>
 <td valign="top"></td>
-<td valign="top" colspan="3">Tier 4<br></td>
+<td valign="top" colspan="3">T2 Resources<br></td>
+<td valign="top"></td>
+<td valign="top" colspan="3">T3 Factories<br></td>
+<td valign="top"></td>
+<td valign="top" colspan="3">T3 Resources<br></td>
+<td valign="top"></td>
+<td valign="top" colspan="3">T4 Factories<br></td>
+<td valign="top"></td>
+<td valign="top" colspan="3">T4 Resources<br></td>
+<td valign="top"></td>
+<td valign="top" colspan="3">T5 Factories<br></td>
+<td valign="top"></td>
+<td valign="top" colspan="3">T5 Resources<br></td>
+<td valign="top"></td>
+<td valign="top" colspan="3">T6 Factories<br></td>
+<td valign="top"></td>
+<td valign="top" colspan="3">T6 Resources<br></td>
+<td valign="top"></td>
+<td valign="top" colspan="3">T7 Factories<br></td>
+<td valign="top"></td>
+<td valign="top" colspan="3">T7 Resources<br></td>
 <td valign="top"></td>
 <td valign="top" colspan="3">Special<br></td>
 </tr>
 <tr>
 <td class="items">
 <ul id="maps">
-<li>Stockholm</li>
-<li>Oslo</li>
-<li>St Petersburg</li>
-<li>Rotterdam</li>
-<li>Detroit</li>
-<li>Toulouse</li>
-<li>Rome</li>
-<li>Hamburg</li>
-<li>Boston</li>
+<li class="map">Stockholm</li>
+<li class="map">Oslo</li>
+<li class="map">St Petersburg</li>
+<li class="map">Rotterdam</li>
+<li class="map">Detroit</li>
+<li class="map">Toulouse</li>
+<li class="map">Rome</li>
+<li class="map">Hamburg</li>
+<li class="map">Boston</li>
+<li class="map">Osaka</li>
 </ul>
 </td>
 <td colspan="3" class="items">
 <ul id="resources">
-<li class="stockholm oslo st-petersburg rotterdam detroit toulouse rome hamburg boston">Iron</li>
+<li class="stockholm oslo st-petersburg rotterdam detroit toulouse rome hamburg boston osaka">Iron</li>
 <li class="stockholm oslo st-petersburg toulouse hamburg boston">Oil</li>
-<li class="stockholm oslo st-petersburg rotterdam detroit toulouse rome hamburg boston">Coal</li>
-<li class="stockholm oslo st-petersburg rotterdam detroit toulouse rome hamburg boston">Aluminum</li>
-<li class="stockholm hamburg">Copper</li>
-<li class="stockholm oslo st-petersburg rotterdam detroit toulouse rome hamburg boston">Silicon</li>
-<li class="rotterdam rome">Chromium</li>
-<li class="detroit toulouse rome boston">Titainium</li>
+<li class="stockholm oslo st-petersburg rotterdam detroit toulouse rome hamburg boston osaka">Coal</li>
+<li class="stockholm oslo st-petersburg rotterdam detroit toulouse rome hamburg boston osaka">Aluminum</li>
+<li class="stockholm hamburg osaka">Copper</li>
+<li class="stockholm oslo st-petersburg rotterdam detroit toulouse rome hamburg boston osaka">Silicon</li>
+<li class="rotterdam rome chromium5-alloy-plant">Chromium</li>
+<li class="detroit toulouse rome boston osaka titanium5-alloy-plant">Titanium</li>
 <li class="st-petersburg toulouse">Uranium</li>
 <li class="oslo rotterdam detroit rome boston">Gas</li>
-<li class="detroit hamburg">Lithium</li>
-<li class="stockholm oslo st-petersburg rotterdam detroit toulouse rome hamburg boston">Wood</li>
+<li class="detroit hamburg osaka">Lithium</li>
+<li class="stockholm oslo st-petersburg rotterdam detroit toulouse rome hamburg boston osaka">Wood</li>
+</ul>
+</td>
+<td class="items"></td>
+<td colspan="3" class="items">
+<ul id="tf1">
+<li class="wood">Lumber Mill</li>
+<li class="wood">Paper Mill</li>
+<li class="iron coal">Steel Mill</li>
+<li class="iron chromium">Stainless Steel Plant</li>
+<li class="oil">Oil Refinery</li>
+<li class="coal">Coal Gasification Plant</li>
+<li class="gas">Gas Processing Plant</li>
+<li class="uranium">Uranium Enrichment Plant</li>
+<li class="silicon iron coal">Semiconductor Factory</li>
+<li class="aluminum silicon">Integrated Circuit Fab</li>
+<li class="aluminum coal iron">Battery Factory</li>
+<li class="chromium nullsteel">Titanium Alloy Plant</li>
+<li class="lithium aluminum">Chromium Alloy Plant</li>
+<li class="lithium">Liion Battery Factory</li>
+<li class="silicon coal">Glass Factory</li>
 </ul>
 </td>
 <td class="items"></td>
 <td colspan="3" class="items">
 <ul id="tr1">
-<li class="wood">Lumber</li>
-<li class="wood">Paper</li>
+<li class="lumber-mill">Lumber</li>
+<li class="paper-mill">Paper</li>
+<li class="steel-mill">Steel</li>
+<li class="oil-refinery">Petrol</li>
+<li class="oil-refinery gas-processing-plant">Plastic</li>
+<li class="uranium-enrichment-plant">Enriched Uranium</li>
+<li class="semiconductor-factory">Semiconductor</li>
+<li class="battery-factory liion-battery-factory">Battery</li>
+<li class="glass-factory">Glass</li>
+</ul>
+</td>
+<td class="items"></td>
+<td colspan="3" class="items">
+<ul id="tf2">
+<li class="semiconductor copper">Circuit Foundry</li>
+<li class="plastic battery">Toy Factory</li>
+<li class="plastic">Shoe Factory</li>
+<li class="plastic paper">Clothing Factory</li>
+<li class="battery aluminum semiconductor steel">Robot Factory</li>
+<li class="glass plastic silicon">Screen Factory</li>
+<li class="aluminum glass semiconductor plastic battery">Camera Factory</li>
+<li class="steel aluminum plastic">Engine Factory</li>
+<li class="steel plastic lumber">Gun Factory</li>
+<li class="paper coal">Book Publisher</li>
+<li class="plastic lumber">Guitar Factory</li>
+<li class="plastic iron lumber">Drum Factory</li>
+<li class="semiconductor">Polytechnic</li>
 </ul>
 </td>
 <td class="items"></td>
 <td colspan="3" class="items">
 <ul id="tr2">
-<li class="paper">Book</li>
+<li class="circuit-foundry">Integrated Circuit</li>
+<li class="toy-factory">Toy</li>
+<li class="shoe-factory">Shoes</li>
+<li class="clothing-factory">Clothing</li>
+<li class="robot-factory">Robot</li>
+<li class="screen-factory">Screen</li>
+<li class="camera-factory">Camera</li>
+<li class="engine-factory">Engine</li>
+<li class="gun-factory">Gun</li>
+<li class="book-publisher">Book</li>
+<li class="guitar-factory">Guitar</li>
+<li class="drum-factory">Drum</li>
+</ul>
+</td>
+<td class="items"></td>
+<td colspan="3" class="items">
+<ul id="tf3">
+<li class="shoes clothes">Fashion Factory</li>
+<li class="toy shoes clothes">Santa Factory</li>
+<li class="battery aluminum camera screen integrated-circuit plastic">Phone Factory</li>
+<li class="battery aluminum screen integrated-circuit plastic">Computer Factory</li>
+<li class="engine aluminum steel">Jet Engine Factory</li>
+<li class="steel gun lumber">Artillery Factory</li>
+<li class="engine steel semiconductor glass aluminum plastic battery lumber">Car Factory</li>
+<li class="engine steel glass aluminum plastic lumber">Train Factory</li>
+<li class="engine steel semiconductor glass aluminum plastic coal lumber">Shipyard</li>
+<li class="engine steel glass aluminum plastic gun">Helicopter Factory</li>
+<li class="engine steel lumber glass aluminum plastic">Zeppelin Factory</li>
+<li class="guitar drum">Recording Studio</li>
+<li class="book">School</li>
+<li class="shoes clothes">Colosseum</li>
 </ul>
 </td>
 <td class="items"></td>
 <td colspan="3" class="items">
 <ul id="tr3">
-<li class="null">null</li>
+<li class="fashion-factory">Fashion</li>
+<li class="santa-factory">Santa</li>
+<li class="phone-factory">Phone</li>
+<li class="computer-factory">PC</li>
+<li class="jet-engine-factory">Jet Engine</li>
+<li class="artillery-factory">Artillery</li>
+<li class="car-factory">Car</li>
+<li class="train-factory">Train</li>
+<li class="shipyard">Ship</li>
+<li class="helicopter-factory">Helicopter</li>
+<li class="zeppelin-factory">Zeppelin</li>
+<li class="recording-studio">Music</li>
+</ul>
+</td>
+<td class="items"></td>
+<td colspan="3" class="items">
+<ul id="tf4">
+<li class="camera fashion">Video Farm</li>
+<li class="steel jet-engine semiconductor gun titanium uranium">Missile Factory</li>
+<li class="pc integrated-circuit">Bitcoin Farm</li>
+<li class="engine steel plastic artillery aluminum coal">Tank Factory</li>
+<li class="pc robot jet-engine plastic steel glass aluminum titanium battery">Satellite Factory</li>
+<li class="jet-engine steel titanium semiconductor glass aluminum plastic">Aircraft Factory</li>
+<li class="phone pc toy">Game Studio</li>
+<li class="phone pc book">Software Company</li>
+<li class="music">Opera House</li>
+<li class="fashion pc">University</li>
+<li class="book paper fashion">Manga Publisher</li>
+<li class="santa artillery fashion">Kung Fu Dojo</li>
 </ul>
 </td>
 <td class="items"></td>
 <td colspan="3" class="items">
 <ul id="tr4">
-<li class="null">null</li>
+<li class="video-farm">Video</li>
+<li class="missile-factory">Missile</li>
+<li class="bitcoin-farm">Bitcoin</li>
+<li class="tank-factory">Tank</li>
+<li class="satellite-factory">Satellite</li>
+<li class="aircraft-factory">Aircraft</li>
+<li class="game-studio">Game</li>
+<li class="software-company">Software</li>
+<li class="manga-publisher">Manga</li>
+<li class="kung-fu-dojo">Kung Fu</li>
+</ul>
+</td>
+<td class="items"></td>
+<td colspan="3" class="items">
+<ul id="tf5">
+<li class="bitcoin fashion toy">Dogecoin Farm</li>
+<li class="steel semiconductor robot jet-engine missile titanium enriched-uranium">Rocket Factory</li>
+<li class="engine steel lumber semiconductor glass missile enriched-uranium">Submarine Factory</li>
+<li class="video pc camera fashion">Movie Studio</li>
+<li class="game integrated-circuit plastic battery aluminum">Console Factory</li>
+<li class="pc game software">Linux Distribution</li>
+<li class="pc software video">Operating System Inc</li>
+<li class="video pc camera fashion">TV Studio</li>
+</ul>
+</td>
+<td class="items"></td>
+<td colspan="3" class="items">
+<ul id="tr5">
+<li class="dogecoin-farm">Dogecoin</li>
+<li class="rocket-factory">Rocket</li>
+<li class="submarine-factory">Submarine</li>
+<li class="movie-studio">Movie</li>
+<li class="console-factory">Console</li>
+<li class="linux-distribution operating-system-inc">Operating System</li>
+<li class="tv-studio">Sitcom</li>
+</ul>
+</td>
+<td class="items"></td>
+<td colspan="3" class="items">
+<ul id="tf6">
+<li class="rocket steel integrated-circuit aluminum missile titanium glass enriched-uranium battery">Spaceship Factory</li>
+<li class="operating-system software chromium">Web Browser</li>
+<li class="movie sitcom music fashion">Anime Studio</li>
+<li class="kung-fu movie rocket">Tai Chi Dojo</li>
+</ul>
+</td>
+<td class="items"></td>
+<td colspan="3" class="items">
+<ul id="tr6">
+<li class="spaceship-factory">Spaceship</li>
+<li class="web-browser">Internet</li>
+<li class="anime-studio">Anime</li>
+<li class="tai-chi-dojo">Tai Chi</li>
+</ul>
+</td>
+<td class="items"></td>
+<td colspan="3" class="items">
+<ul id="tf7">
+<li class="spaceship satellite rocket">Space Station Factory</li>
+</ul>
+</td>
+<td class="items"></td>
+<td colspan="3" class="items">
+<ul id="tr7">
+<li class="space-station-factory">Space Station</li>
 </ul>
 </td>
 <td class="items"></td>
 <td colspan="3" class="items">
 <ul id="sp1">
-<li class="book">Science</li>
-<li class="paper">Culture</li>
+<li class="polytechnic school university">Science</li>
+<li class="colosseum book-publisher opera-house university">Culture</li>
 </ul>
 </td>
 <td class="items"></td>
@@ -234,8 +422,12 @@
 <script>
 $(document).ready(function() {
 	
-	var colors = ["#333","#492f1f","#763c19","#f7941d","yellow","#79cef4","#00aeef","lime","green","#304b15"];
-	$(".items li").css({color:colors[0]});
+	var baseColor = "#ff00ff";
+	var currentColor = "#0000ff";
+	var beforeColors = ["#ffff00","#ffff32","#ffff64","#ffff96"];
+	var afterColors = ["#00ffff","#32ffff","#64ffff","#96ffff"];
+	
+	$(".items li").css({color:baseColor});
 	
 	canvas();
 	$(window).resize(function() { // todo: get event, only repaint on mouse release
@@ -261,14 +453,18 @@ $(document).ready(function() {
 		.on('mouseenter','ul li',function() {
 			if (! $('#pi').hasClass('sticky')) {
 				$(this).addClass("current");
-				$(this).css({color:colors[5]});
+				$(this).css({color:currentColor});
+
 				pi_link($(this));
+				if (!$(this).hasClass('map')){
+					
+				}
 			}
 		})
 		.on('mouseleave','ul li',function() {
 			if (! $('#pi').hasClass('sticky')) {
 				$(this).removeClass("current");
-				$(".items li").css({color:colors[0]});
+				$(".items li").css({color:baseColor});
 				canvas();
 			}
 		})
@@ -281,15 +477,15 @@ $(document).ready(function() {
 			if ($('#pi').hasClass('sticky')) {
 				$('#pi').removeClass('sticky')
 				
-				$('.items li').removeClass('current').css({color:colors[0]});
+				$('.items li').removeClass('current').css({color:baseColor});
 			} else {
 				$('#pi').addClass('sticky')
 				
-				$('.items li').removeClass('current').css({color:colors[0]});
+				$('.items li').removeClass('current').css({color:baseColor});
 				canvas();
 
 				$(this).addClass("current");
-				$(this).css({color:colors[5]});
+				$(this).css({color:currentColor});
 				pi_link($(this));
 			}
 		})
@@ -301,8 +497,8 @@ $(document).ready(function() {
 	
 	function lower_case(s) { return s.toLowerCase().replace(/ /g, '-').replace(/\./g, ''); }
 	function pi_link(item) {
-		pi_link_before(item,-1);
-		pi_link_after(item,1);
+		pi_link_before(item,0);
+		pi_link_after(item,0);
 	}
 	function pi_link_before(item, degree, depth) {
 		type   = item.parent("ul").attr("id");
@@ -310,11 +506,9 @@ $(document).ready(function() {
 		class_prefex = ".items li span.";
 		$(".items li span."+item.attr("id"))
 			.each(function() {
-				$(this).parent("li").css({color: colors[5+degree]});
-				if (degree > -4) {
-					line(item.children("span"),$(this),colors[5+degree],colors[5+degree+1]);
-				}
-				pi_link_before($(this).parent("li"),degree-1);
+				$(this).parent("li").css({color: beforeColors[0]});
+				line(item.children("span"),$(this),beforeColors[0],beforeColors[0]);
+				pi_link_before($(this).parent("li"),degree+1);
 			});
 	}
 	function pi_link_after(item, degree, depth) {
@@ -322,10 +516,8 @@ $(document).ready(function() {
 		
 		$(".items li."+item.attr("id"))
 			.each(function() {
-				$(this).css({color: colors[5+degree]});
-				if (degree < 3) {
-					line($(this).children("span"),item.children("span"),colors[5+degree-1],colors[5+degree]);
-				}
+				$(this).css({color: afterColors[0]});
+				line($(this).children("span"),item.children("span"),afterColors[0],afterColors[0]);
 				pi_link_after($(this),degree+1);
 			});
 	}
@@ -354,8 +546,8 @@ function line(a,b,c1,c2) {
 	ty  = b.position().top + b.height()/2 + 1;
 
 	var cvs = document.getElementById('canvas');
-
 	var ctx = cvs.getContext('2d');
+
 	ctx.lineWidth = 1;
 	ctx.beginPath();
 	ctx.moveTo(tx,ty);
@@ -368,17 +560,56 @@ function line(a,b,c1,c2) {
 
 	ctx.strokeStyle = gdt;
 	ctx.stroke();
+
+	ctx.font  = '10pt Arial';
+	ctx.fillStyle = "#ff00ff";
+	//drawLabel(ctx, "10", {x: tx, y: ty}, {x: fx, y: fy},"center",0)
+}
+function drawLabel( ctx, text, p1, p2, alignment, padding ){
+  if (!alignment) alignment = 'center';
+  if (!padding) padding = 0;
+
+  var dx = p2.x - p1.x;
+  var dy = p2.y - p1.y;   
+  var p, pad;
+  if (alignment=='center'){
+    p = p1;
+    pad = 1/2;
+  } else {
+    var left = alignment=='left';
+    p = left ? p1 : p2;
+    pad = padding / Math.sqrt(dx*dx+dy*dy) * (left ? 1 : -1);
+  }
+
+  ctx.save();
+  ctx.textAlign = alignment;
+  ctx.translate(p.x+dx*pad,p.y+dy*pad);
+  ctx.rotate(Math.atan2(dy,dx));
+  ctx.fillText(text,0,4);
+  ctx.restore();
 }
 
 
 pi = {
-	maps: ['Stockholm','Oslo','St. Petersburg','Rotterdam','Detroit','Toulouse','Rome','Hamburg','Boston'],
+	maps: ['Stockholm','Oslo','St Petersburg','Rotterdam','Detroit','Toulouse','Rome','Hamburg','Boston','Osaka'],
 	resources: ['Iron','Oil','Coal','Aluminum','Copper','Silicon','Chromium','Titanium','Uranium','Gas','Lithium','Wood'],
 	productions: {
-		tr1: ['Lumber','Paper'],
-		tr2: ['Biocells','Construction Blocks','Consumer Electronics','Coolant','Enriched Uranium','Fertilizer','Gen. Enhanced Livestock','Livestock','Mechanical Parts','Microfiber Shielding','Miniature Electronics','Nanites','Oxides','Polyaramids','Polytextiles','Rocket Fuel','Silicate Glass','Superconductors','Supertensile Plastics','Synthetic Oil','Test Cultures','Transmitter','Viral Agent','Water-Cooled CPU'],
-		tr3: ['Biotech Research Reports','Camera Drones','Condensates','Cryoprotectant Solution','Data Chips','Gel-Matrix Biopaste','Guidance Systems','Hazmat Detection Systems','Hermetic Membranes','High-Tech Transmitters','Industrial Explosives','Neocoms','Nuclear Reactors','Planetary Vehicles','Robotics','Smartfab Units','Supercomputers','Synthetic Synapses','Transcranial Microcontrollers','Ukomi Super Conductors','Vaccines'],
-		tr4: ['Broadcast Node','Integrity Response Drones','Nano-Factory','Organic Mortar Applicators','Recursive Computing Module','Self-Harmonizing Power Core','Sterile Conduits','Wetware Mainframe']
+		tr1: ['Lumber','Paper','Steel','Petrol','Plastic','Enriched Uranium','Semiconductor','Battery','Glass'],
+		tr2: ['Integrated Circuit','Toy','Shoes','Clothing','Robot','Screen','Camera','Engine','Gun','Book','Guitar','Drum'],
+		tr3: ['Fashion','Santa','Phone','PC','JetEngine','Artillery','Car','Train','Ship','Helicopter','Zeppelin','Music'],
+		tr4: ['Video','Missile','Bitcoin','Tank','Satellite','Aircraft','Game','Software'],
+		tr5: ['Dogecoin','Rocket','Submarine','Movie','Console','OperatingSystem'],
+		tr6: ['Spaceship','Internet'],
+		tr7: ['Space Station']
+	},
+	factories: {
+		tf1: ['Lumber Mill','Paper Mill','Steel Mill','Stainless Steel Plant','Oil Refinery','Coal Gasification Plant','GasProcessingPlant','UraniumEnrichmentPlant','SemiconductorFactory','IntegratedCircuitFab','Battery Factory','Titanium Alloy Plant','Chromium Alloy Plant','Liion Battery Factory','Glass Factory'],
+		tf2: ['Circuit Foundry','Toy Factory','Shoe Factory','Clothing Factory','RobotFactory','ScreenFactory','CameraFactory','EngineFactory','GunFactory','Book Publisher','GuitarFactory','DrumFactory','Polytechnic'],
+		tf3: [],
+		tf4: [],
+		tf5: [],
+		tf6: [],
+		tf7: ['Space Station Factory']
 	},
 	special: {
 		sp1: ['Science','Culture'],

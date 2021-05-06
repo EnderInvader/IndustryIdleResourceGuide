@@ -1,0 +1,104 @@
+@import '~ui-bootstrap4/dist/ui-bootstrap-csp.css';
+@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+@import 'recipe-list.scss';
+@import 'production.scss';
+
+// hey bootswatch, we don't need microtext, thx!
+.navbar, .dropdown-menu, .dropdown-header, .table, label, .radio label, .checkbox label, .help-block {
+	font-size: 1rem;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+:focus, .btn-default-focus {
+	outline: none;
+}
+
+.form-control {
+	background-color: $gray-300;
+
+	&:disabled {
+		background-color: $gray-500;
+		cursor: not-allowed;
+	}
+}
+
+.toasts {
+	z-index: 10000;
+	position: fixed;
+	top: 60px;
+	right: 10px;
+
+	.toast {
+		z-index: 10000;
+	}
+}
+
+.disabled {
+	cursor: not-allowed;
+}
+
+.navbar-brand {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+* {
+	font-size: 1rem;
+}
+
+a {
+	cursor: pointer;
+
+	&:hover {
+		color: #e77a31;
+	}
+}
+
+.bg-tertiary {
+	background-color: #33475e;
+}
+
+.visualization {
+	display: block;
+	width: 100%;
+	height: 800px;
+	border: 1px solid #4e5d6c;
+}
+
+.filter-actions {
+	a {
+		margin: 10px 0;
+	}
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.cursor-drag {
+	cursor: move;
+}
+
+.ui-select-choices-row {
+	margin-bottom: 0.3px;
+}
+
+ui-view[name="content"] {
+	margin-top: 10px;
+	display: block;
+}
+
+table {
+	a {
+		text-decoration: none !important;
+	}
+}
+
+table.two-columns {
+	td {
+		width: 50%;
+	}
+}

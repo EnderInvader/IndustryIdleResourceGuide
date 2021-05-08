@@ -533,7 +533,7 @@ $(document).ready(function() {
 			.each(function() {
 				$(this).parent("li").css({color: beforeColors[0]});
 				line(item.children("span"),$(this),beforeColors[0],beforeColors[0]);
-				pi_link_before($(this).parent("li"),degree+1);
+				//pi_link_before($(this).parent("li"),degree+1);
 			});
 	}
 	function pi_link_after(item, degree, depth) {
@@ -543,7 +543,7 @@ $(document).ready(function() {
 			.each(function() {
 				$(this).css({color: afterColors[0]});
 				line($(this).children("span"),item.children("span"),afterColors[0],afterColors[0]);
-				pi_link_after($(this),degree+1);
+				//pi_link_after($(this),degree+1);
 			});
 	}
 	
